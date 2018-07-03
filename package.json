@@ -1,0 +1,23 @@
+{
+  "name": "tnpmviola",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "webpack --display-modules --display-reasons --debug --config webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tencent/viola-template-compiler": "^2.5.17-beta.0",
+    "@tencent/viola-vue-loader": "^0.1.1",
+    "deep-extend": "^0.6.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3",
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8"
+  },
+  "dependencies": {
+    "css-loader": "^0.28.11"
+  }
+}
