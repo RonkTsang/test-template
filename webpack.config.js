@@ -1,34 +1,6 @@
 const path = require('path');
 const fs = require('fs')
 const webpack = require('webpack')
-// const WrapperPlugin = require('wrapper-webpack-plugin');
-// const VueLoaderPlugin = require('vue-loader/lib/plugin');
-
-// var simNativeCode = `
-//   var ENV = 'web'
-
-//   window.callNative = function (id, tasks) {
-//       console.log('i got it')
-//       console.log('id: ' + id)
-//       console.log('task', tasks)
-//   };
-// `
-
-// var viola = fs.readFileSync(path.resolve(__dirname, 'viola/viola.js'), 'UTF-8')
-
-// simNativeCode += viola
-
-// var wrap = {
-//   start() {
-//     return simNativeCode + '\n' + viola + `
-//       Viola.instanceId = parseInt(Math.random() * 100)
-//       createInstance(String(instanceId), \`
-//     `
-//   },
-//   end() {
-//     return '`)'
-//   }
-// }
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/index.js'),
@@ -45,18 +17,24 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: '@tencent/viola-vue-loader',
+        options: {
+          buble: {
+            objectAssign: 'Object.assign'
+          }
+        }
         // options: {
         //   shadowMode: true
         // }
         // loader: 'weex-vue-loader'
       },
-      // {
-      //   test: /\.css$/,
-      //   use: [
-      //     'vue-style-loader',
-      //     'css-loader'
-      //   ]
-      // }
+      {
+        test: /\.js$/,
+        loader: 'buble-loader',
+        include: path.join(__dirname, 'src'),
+        options: {
+          objectAssign: 'Object.assign'
+        }
+      }
     ]
   },
   resolve: {

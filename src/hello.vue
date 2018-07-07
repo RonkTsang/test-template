@@ -1,8 +1,15 @@
 <template>
   <div>
     <div :style="style" @click="handler" class="viola">
-      <text class="text"> {{ text }} </text>
-
+      <text
+        style="
+          background-color: red
+        "
+        class="text"
+      > 
+      {{ text }}
+      </text>
+  
       <text class="text"> {{ dynamic ? '' : 'false' }} </text>
 
       <div>
@@ -12,6 +19,7 @@
   </div>
 </template>
 <script>
+
   export default {
     data () {
       return {
@@ -33,14 +41,14 @@
 </script>
 <style scoped lang="scss">
   .viola {
-    backgroundColor: rgb(77, 69, 190);
+    background-color: rgb(77, 69, 190);
 
     .p {
       color: blue;
     }
 
     &[type=oj] {
-      backgroundColor: red;
+      background-color: red;
     }
   }
 

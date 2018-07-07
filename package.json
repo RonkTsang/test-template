@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "webpack --display-modules --display-reasons --debug --config webpack.config.js"
+    "dev": "webpack -w --display-modules --display-reasons --debug --config webpack.config.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@tencent/viola-template-compiler": "^2.5.17-beta.0",
-    "@tencent/viola-vue-loader": "^0.1.1",
+    "@tencent/viola-template-compiler": "^2.5.19",
+    "@tencent/viola-vue-loader": "^0.1.7",
     "deep-extend": "^0.6.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.3",
@@ -18,6 +18,8 @@
     "webpack-cli": "^3.0.8"
   },
   "dependencies": {
+    "buble": "^0.19.3",
+    "buble-loader": "^0.5.1",
     "css-loader": "^0.28.11"
   }
 }

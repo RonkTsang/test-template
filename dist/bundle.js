@@ -91,60 +91,14 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _hello_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-// var Vue = require('vue')
 
-// var hello = require('./hello.vue')
 
-// hello()
 
-// const Vue = require('vue')
-// import Vue from 'viola-vue'
-window.app = new Vue({
+var app = new Vue({
   el: '#app',
-  // template: '<hello/>',
   components: { hello: _hello_vue__WEBPACK_IMPORTED_MODULE_0__["default"] },
-  render: (h) => h(_hello_vue__WEBPACK_IMPORTED_MODULE_0__["default"])
+  render: function (h) { return h(_hello_vue__WEBPACK_IMPORTED_MODULE_0__["default"]); }
 })
-// console.log(Vue)
-/* 
-var cls = genClassForVnode(vnode);
-var oldCls = genClassForVnode(oldVnode);
-console.log('cls:', cls)
-console.log('oldCls:', oldCls)
-var styles = $getStyle(oldCls || [], cls, vnode.context)
-console.log('style: ', styles)
-
-for (const key in styles) {
-  if (styles.hasOwnProperty(key)) {
-    let s = styles[key]
-    if (!isNaN(parseInt(s))) s += 'px'
-    el.style[key] = s
-  }
-} */
-
-/* 
-
-function $getStyle(oldClassList, classList, ctx) {
-    // style is a weex-only injected object
-    // compiled from <style> tags in weex files
-    const stylesheet = ctx.$options.style || {}
-    const result = {}
-    classList.forEach(name => {
-      const style = stylesheet[name]
-      extend(result, style)
-    })
-    oldClassList.forEach(name => {
-      const style = stylesheet[name]
-      for (const key in style) {
-        if (!result.hasOwnProperty(key)) {
-          result[key] = ''
-        }
-      }
-    })
-    return result
-      }
-
-*/
 
 /***/ }),
 /* 1 */
@@ -152,8 +106,8 @@ function $getStyle(oldClassList, classList, ctx) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_tencent_viola_vue_loader_lib_selector_type_script_index_0_hello_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_tencent_viola_vue_loader_lib_template_compiler_index_id_data_v_dc790388_hasScoped_true_optionsId_0_buble_transforms_node_modules_tencent_viola_vue_loader_lib_selector_type_template_index_0_hello_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/* harmony import */ var _buble_loader_objectAssign_Object_assign_node_modules_tencent_viola_vue_loader_lib_selector_type_script_index_0_hello_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_tencent_viola_vue_loader_lib_template_compiler_index_id_data_v_dc790388_hasScoped_true_optionsId_0_buble_objectAssign_Object_assign_transforms_node_modules_tencent_viola_vue_loader_lib_selector_type_template_index_0_hello_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
 /* harmony import */ var _node_modules_tencent_viola_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
 var injectStyle = __webpack_require__(2)
 /* script */
@@ -171,9 +125,9 @@ var __vue_scopeId__ = "data-v-dc790388"
 var __vue_module_identifier__ = null
 
 var Component = Object(_node_modules_tencent_viola_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _node_modules_tencent_viola_vue_loader_lib_selector_type_script_index_0_hello_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-  _node_modules_tencent_viola_vue_loader_lib_template_compiler_index_id_data_v_dc790388_hasScoped_true_optionsId_0_buble_transforms_node_modules_tencent_viola_vue_loader_lib_selector_type_template_index_0_hello_vue__WEBPACK_IMPORTED_MODULE_1__["render"],
-  _node_modules_tencent_viola_vue_loader_lib_template_compiler_index_id_data_v_dc790388_hasScoped_true_optionsId_0_buble_transforms_node_modules_tencent_viola_vue_loader_lib_selector_type_template_index_0_hello_vue__WEBPACK_IMPORTED_MODULE_1__["staticRenderFns"],
+  _buble_loader_objectAssign_Object_assign_node_modules_tencent_viola_vue_loader_lib_selector_type_script_index_0_hello_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+  _node_modules_tencent_viola_vue_loader_lib_template_compiler_index_id_data_v_dc790388_hasScoped_true_optionsId_0_buble_objectAssign_Object_assign_transforms_node_modules_tencent_viola_vue_loader_lib_selector_type_template_index_0_hello_vue__WEBPACK_IMPORTED_MODULE_1__["render"],
+  _node_modules_tencent_viola_vue_loader_lib_template_compiler_index_id_data_v_dc790388_hasScoped_true_optionsId_0_buble_objectAssign_Object_assign_transforms_node_modules_tencent_viola_vue_loader_lib_selector_type_template_index_0_hello_vue__WEBPACK_IMPORTED_MODULE_1__["staticRenderFns"],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -244,9 +198,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  data () {
+  data: function data () {
     return {
       style: {
         width: '500px',
@@ -258,7 +220,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
-    handler () {
+    handler: function handler () {
       this.text = 'Tom'
     }
   }
@@ -282,9 +244,11 @@ var render = function() {
       "div",
       { staticClass: "viola", style: _vm.style, on: { click: _vm.handler } },
       [
-        _c("text", { staticClass: "text" }, [
-          _vm._v(" " + _vm._s(_vm.text) + " ")
-        ]),
+        _c(
+          "text",
+          { staticClass: "text", staticStyle: { backgroundColor: "red" } },
+          [_vm._v(" \n    " + _vm._s(_vm.text) + "\n    ")]
+        ),
         _c("text", { staticClass: "text" }, [
           _vm._v(" " + _vm._s(_vm.dynamic ? "" : "false") + " ")
         ]),
