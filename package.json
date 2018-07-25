@@ -1,13 +1,13 @@
 {
   "name": "tnpmviola",
   "version": "1.0.0",
-  "description": "",
+  "description": "a template for viola test",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config build/webpack.prod.js",
     "dev": "webpack -w --display-modules --display-reasons --debug --config build/webpack.dev.js"
   },
-  "author": "",
+  "author": "ronk zeng",
   "license": "ISC",
   "devDependencies": {
     "@tencent/viola-template-compiler": "^2.5.19",
