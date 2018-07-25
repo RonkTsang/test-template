@@ -1,16 +1,14 @@
-const path = require('path');
-const fs = require('fs')
-const webpack = require('webpack')
+const path = require('path')
+
+const __root = path.resolve(__dirname, '../')
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src/index.js'),
+  entry: path.resolve(__root, 'src/index.js'),
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__root, 'dist')
   },
   node: false,  // 关闭 webpack 对 node api接口的 polyfill
-  // mode: 'development',
-  // mode: 'production',
   module: {
     rules: [
       {
@@ -25,7 +23,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'buble-loader',
-        include: path.join(__dirname, 'src'),
+        include: path.join(__root, 'src'),
         options: {
           objectAssign: 'Object.assign'
         }
@@ -35,8 +33,7 @@ module.exports = {
   resolve: {
     extensions: ['.vue', '.js'],
     alias: {
-      '@component': path.resolve(__dirname, 'src/component/')
+      '@component': path.resolve(__root, 'src/component/')
     }
-  },
-  plugins: []
+  }
 };

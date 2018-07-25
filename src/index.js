@@ -1,5 +1,5 @@
 
-import hello from './hello.vue'
+import hello from '@component/hotTopic/'
 
 var app = new Vue({
   el: '#app',
