@@ -1,1 +1,0 @@
-export const getHotTopic = 'xxx/xx/xx'

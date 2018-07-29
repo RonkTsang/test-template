@@ -1,16 +1,16 @@
 {
   "name": "tnpmviola",
-  "version": "1.0.1",
-  "description": "a template for viola test",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config build/webpack.prod.js",
-    "dev": "webpack -w --display-modules --display-reasons --debug --config build/webpack.dev.js"
+    "build": "node build/prod.js",
+    "dev": "node build/dev.js"
   },
-  "author": "ronk zeng",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@tencent/viola-template-compiler": "^2.5.19",
+    "@tencent/viola-template-compiler": "^2.5.20",
     "@tencent/viola-vue-loader": "^0.1.7",
     "deep-extend": "^0.6.0",
     "node-sass": "^4.9.0",
@@ -22,6 +22,7 @@
   "dependencies": {
     "buble": "^0.19.3",
     "buble-loader": "^0.5.1",
-    "css-loader": "^0.28.11"
+    "css-loader": "^0.28.11",
+    "yargs": "12.0.1"
   }
 }

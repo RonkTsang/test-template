@@ -5,9 +5,10 @@ const webpack = require('webpack')
 module.exports = {
   entry: path.resolve(__dirname, 'src/index.js'),
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle.weishiLeadTo.js',
     path: path.resolve(__dirname, 'dist')
   },
+  // devtool: 'source-map',
   node: false,  // 关闭 webpack 对 node api接口的 polyfill
   // mode: 'development',
   // mode: 'production',
